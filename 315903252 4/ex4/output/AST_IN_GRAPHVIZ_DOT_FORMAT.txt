@@ -1,0 +1,45 @@
+digraph
+{
+graph [ordering = "out"]
+v0 [label = "VAR
+DEC(x)
+:int"];
+v1 [label = "STMT
+DEC
+VAR"];
+v1 -> v0;
+v2 [label = "INT(5)"];
+v3 [label = "VAR
+DEC(y)
+:int"];
+v3 -> v2;
+v4 [label = "STMT
+DEC
+VAR"];
+v4 -> v3;
+v8 [label = "STMT
+CALL"];
+v8 -> v7;
+v9 [label = "STMT
+LIST
+"];
+v9 -> v8;
+v10 [label = "STMT
+LIST
+"];
+v10 -> v4;
+v10 -> v9;
+v11 [label = "STMT
+LIST
+"];
+v11 -> v1;
+v11 -> v10;
+v12 [label = "FUNC(main)
+:void
+"];
+v12 -> v11;
+v13 [label = "DEC
+LIST
+"];
+v13 -> v12;
+}
